@@ -55,6 +55,6 @@ renderHeader("Contact - PHP Learning Hub");
 </script>
 
 <?php
-include 'components/footer.php';
+include '../components/footer.php';
 renderFooter();
 ?>

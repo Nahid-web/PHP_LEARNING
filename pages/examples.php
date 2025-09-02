@@ -44,6 +44,7 @@ renderHeader("Examples - PHP Learning Hub");
 </section>
 
 <?php
-include 'components/footer.php';
+
+include '../components/footer.php';
 renderFooter();
 ?>
