@@ -8,13 +8,24 @@
 ======================================== */
 
 @keyframes fadeIn {
-    from { 
-        opacity: 0; 
-        transform: translateY(20px); 
+    from {
+        opacity: 0;
+        transform: translateY(20px);
     }
-    to { 
-        opacity: 1; 
-        transform: translateY(0); 
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
@@ -52,6 +63,11 @@
     to { transform: rotate(360deg); }
 }
 
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
 /* ========================================
    NAVIGATION STYLES
 ======================================== */
@@ -71,21 +87,21 @@
 }
 
 .nav-link {
-    @apply text-gray-600 hover:text-blue-600 transition-all duration-300 
-           relative font-medium px-2 py-1 rounded;
+    @apply text-gray-600 hover:text-blue-600 transition-all duration-300
+           relative font-medium px-2 py-1 rounded-lg;
 }
 
 .nav-link:hover {
-    @apply bg-blue-50;
+    @apply bg-blue-50 text-blue-600 shadow-sm;
 }
 
 .nav-link.active {
-    @apply text-blue-600 bg-blue-50;
+    @apply text-blue-600 bg-blue-50 shadow-sm;
 }
 
 .nav-link.active::after {
     content: '';
-    @apply absolute bottom-0 left-0 right-0 h-0.5 bg-blue-600;
+    @apply absolute bottom-0 left-0 right-0 h-0.5 bg-blue-600 rounded-full;
 }
 
 /* Mobile Menu */
@@ -119,33 +135,38 @@
 ======================================== */
 
 .btn-primary {
-    @apply bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 
-           rounded-full hover:shadow-lg transition-all duration-300 transform 
+    @apply bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3
+           rounded-full hover:shadow-lg transition-all duration-300 transform
            hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-200
-           font-medium;
+           font-medium focus:ring-opacity-50 active:scale-95;
 }
 
 .btn-secondary {
-    @apply bg-white text-blue-600 border-2 border-blue-600 px-8 py-3 
-           rounded-full hover:bg-blue-600 hover:text-white transition-all 
-           duration-300 font-medium;
+    @apply bg-white text-blue-600 border-2 border-blue-600 px-8 py-3
+           rounded-full hover:bg-blue-600 hover:text-white transition-all
+           duration-300 font-medium focus:outline-none focus:ring-4
+           focus:ring-blue-200 focus:ring-opacity-50 active:scale-95;
 }
 
 .btn-counter {
-    @apply px-6 py-2 rounded-lg transition-colors duration-300 font-medium
-           focus:outline-none focus:ring-2 focus:ring-offset-2;
+    @apply px-6 py-2 rounded-lg transition-all duration-300 font-medium
+           focus:outline-none focus:ring-2 focus:ring-offset-2
+           hover:shadow-md active:scale-95;
 }
 
 .btn-red {
-    @apply bg-red-500 hover:bg-red-600 text-white focus:ring-red-500;
+    @apply bg-red-500 hover:bg-red-600 text-white focus:ring-red-500
+           focus:ring-opacity-50;
 }
 
 .btn-green {
-    @apply bg-green-500 hover:bg-green-600 text-white focus:ring-green-500;
+    @apply bg-green-500 hover:bg-green-600 text-white focus:ring-green-500
+           focus:ring-opacity-50;
 }
 
 .btn-gray {
-    @apply bg-gray-500 hover:bg-gray-600 text-white focus:ring-gray-500;
+    @apply bg-gray-500 hover:bg-gray-600 text-white focus:ring-gray-500
+           focus:ring-opacity-50;
 }
 
 /* ========================================
@@ -153,9 +174,9 @@
 ======================================== */
 
 .skill-card {
-    @apply bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-lg shadow-md 
-           hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2
-           border border-blue-100 hover:border-blue-200;
+    @apply bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-lg shadow-md
+           hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2
+           border border-blue-100 hover:border-blue-300;
 }
 
 .skill-icon {
@@ -173,23 +194,36 @@
 }
 
 .skill-level {
-    @apply text-sm text-gray-600 font-medium;
+    @apply text-sm text-gray-600 font-medium transition-all duration-300;
+}
+
+.skill-level:hover {
+    @apply text-gray-800;
 }
 
 .project-card {
-    @apply bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl 
+    @apply bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl
            transition-all duration-300 transform hover:-translate-y-2
-           border border-gray-100 hover:border-blue-200;
+           border border-gray-100 hover:border-blue-300;
 }
 
 .project-image {
-    @apply h-48 bg-gradient-to-br from-blue-400 to-purple-500 
-           flex items-center justify-center relative overflow-hidden;
+    @apply h-48 bg-gradient-to-br from-blue-400 to-purple-500
+           flex items-center justify-center relative overflow-hidden
+           transition-all duration-500;
+}
+
+.project-image:hover {
+    @apply scale-105;
 }
 
 .project-image::before {
     content: '';
-    @apply absolute inset-0 bg-black/20;
+    @apply absolute inset-0 bg-black/20 transition-all duration-300;
+}
+
+.project-image:hover::before {
+    @apply bg-black/30;
 }
 
 /* ========================================
@@ -197,19 +231,35 @@
 ======================================== */
 
 .status-badge {
-    @apply inline-block px-3 py-1 text-sm rounded-full font-medium;
+    @apply inline-block px-3 py-1 text-sm rounded-full font-medium transition-all duration-300;
+}
+
+.status-badge:hover {
+    @apply shadow-sm transform scale-105;
 }
 
 .status-completed {
     @apply bg-green-100 text-green-800;
 }
 
+.status-completed:hover {
+    @apply bg-green-200;
+}
+
 .status-in-progress {
     @apply bg-yellow-100 text-yellow-800;
 }
 
+.status-in-progress:hover {
+    @apply bg-yellow-200;
+}
+
 .status-planning {
     @apply bg-gray-100 text-gray-800;
+}
+
+.status-planning:hover {
+    @apply bg-gray-200;
 }
 
 /* ========================================
@@ -217,7 +267,11 @@
 ======================================== */
 
 .section-title {
-    @apply text-4xl font-bold text-center text-gray-800 mb-12;
+    @apply text-4xl font-bold text-center text-gray-800 mb-12 transition-all duration-300;
+}
+
+.section-title:hover {
+    @apply text-blue-600;
 }
 
 .hero-section {
@@ -225,7 +279,11 @@
 }
 
 .highlight-text {
-    @apply font-semibold text-blue-600;
+    @apply font-semibold text-blue-600 transition-all duration-300;
+}
+
+.highlight-text:hover {
+    @apply text-blue-800 underline;
 }
 
 /* ========================================
@@ -246,13 +304,17 @@
 ======================================== */
 
 .stat-card {
-    @apply bg-white p-6 rounded-lg shadow-md hover:shadow-lg 
+    @apply bg-white p-6 rounded-lg shadow-md hover:shadow-lg
            transition-all duration-300 transform hover:-translate-y-1
-           border border-gray-100;
+           border border-gray-100 hover:border-blue-200;
 }
 
 .stat-number {
-    @apply text-4xl font-bold text-blue-600 mb-2;
+    @apply text-4xl font-bold text-blue-600 mb-2 transition-all duration-300;
+}
+
+.stat-number:hover {
+    @apply text-blue-700 scale-105;
 }
 
 .stat-label {
@@ -285,7 +347,7 @@
 ======================================== */
 
 .footer {
-    @apply bg-gray-800 text-white py-12 px-4;
+    @apply bg-gray-800 text-white py-12 px-4 shadow-lg;
 }
 
 .footer-content {
@@ -323,7 +385,11 @@
 }
 
 .tech-badge {
-    @apply bg-blue-600 text-white text-xs px-2 py-1 rounded-full font-medium;
+    @apply bg-blue-600 text-white text-xs px-2 py-1 rounded-full font-medium transition-all duration-300;
+}
+
+.tech-badge:hover {
+    @apply bg-blue-700 shadow-md transform scale-105;
 }
 
 /* ========================================
@@ -334,11 +400,16 @@
     @apply fixed bottom-6 right-6 w-12 h-12 bg-blue-600 hover:bg-blue-700
            text-white rounded-full shadow-lg hover:shadow-xl
            transition-all duration-300 transform hover:scale-110
-           flex items-center justify-center z-50 opacity-0 pointer-events-none;
+           flex items-center justify-center z-50 opacity-0 pointer-events-none
+           animate-pulse-slow;
 }
 
 .back-to-top.visible {
     @apply opacity-100 pointer-events-auto;
+}
+
+.back-to-top:hover {
+    @apply animate-none;
 }
 
 .loading-overlay {
@@ -351,8 +422,12 @@
 }
 
 .spinner {
-    @apply w-12 h-12 border-4 border-white border-t-transparent 
-           rounded-full animate-spin mx-auto;
+    @apply w-12 h-12 border-4 border-white border-t-transparent
+           rounded-full animate-spin mx-auto transition-all duration-300;
+}
+
+.loading-spinner:hover .spinner {
+    @apply border-4 border-blue-300 border-t-transparent;
 }
 
 /* ========================================
@@ -378,8 +453,20 @@
 }
 
 /* ========================================
+   FORM INPUT STYLES
+   ======================================== */
+
+.form-input {
+    @apply transition-all duration-300;
+}
+
+.form-input:focus {
+    @apply ring-2 ring-blue-500 ring-opacity-50 border-blue-500 shadow-lg;
+}
+
+/* ========================================
    ACCESSIBILITY IMPROVEMENTS
-======================================== */
+   ======================================== */
 
 @media (prefers-reduced-motion: reduce) {
     * {
@@ -387,6 +474,18 @@
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
     }
+}
+
+/* ========================================
+   ANIMATION CLASSES
+   ======================================== */
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-pulse-slow {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
 .sr-only {

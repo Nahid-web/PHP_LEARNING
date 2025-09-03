@@ -265,6 +265,31 @@ $(document).ready(function() {
     });
     
     // ========================================
+    // FORM SUBMISSION LOADING STATE
+    // ========================================
+    
+    $('#contact-form').submit(function() {
+        const $form = $(this);
+        const $submitBtn = $form.find('button[type="submit"]');
+        const originalText = $submitBtn.html();
+        
+        // Add loading state to submit button
+        $submitBtn
+            .html('<i class="fas fa-spinner fa-spin mr-2"></i> Sending...')
+            .prop('disabled', true)
+            .addClass('opacity-75 cursor-not-allowed');
+        
+        // Simulate form submission delay
+        setTimeout(() => {
+            // Revert button state (in a real app, this would happen after actual submission)
+            $submitBtn
+                .html(originalText)
+                .prop('disabled', false)
+                .removeClass('opacity-75 cursor-not-allowed');
+        }, 2000);
+    });
+    
+    // ========================================
     // SCROLL TO TOP FUNCTIONALITY
     // ========================================
     
@@ -537,8 +562,8 @@ $(document).ready(function() {
         // Add loading states to buttons
         $('.btn-primary, .btn-secondary').click(function() {
             const $btn = $(this);
-            $btn.addClass('animate-pulse');
-            setTimeout(() => $btn.removeClass('animate-pulse'), 300);
+            $btn.addClass('animate-pulse-slow');
+            setTimeout(() => $btn.removeClass('animate-pulse-slow'), 300);
         });
         
         // Initialize tooltips (if any)

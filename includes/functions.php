@@ -106,7 +106,7 @@ function getSkillLevel($percentage)
 function generateBreadcrumb($path)
 {
     $breadcrumb = '<nav class="breadcrumb">';
-    $breadcrumb .= '<a href="index.php" class="breadcrumb-item">Home</a>';
+    $breadcrumb .= '<a href="/" class="breadcrumb-item">Home</a>';
 
     foreach ($path as $item) {
         $breadcrumb .= ' / <span class="breadcrumb-item current">' . $item . '</span>';
@@ -148,7 +148,7 @@ function getAge($birthdate)
 {
     $today = new DateTime();
     $birth = new DateTime($birthdate);
-    return $birth->diff($today)->years;
+    return $birth->diff($today)->y;
 }
 
 /**

@@ -14,9 +14,9 @@ $page_title = SITE_NAME . ' - Learning Web Development';
 <!-- Hero Section -->
 <section id="home" class="hero-section py-20 px-4">
     <div class="max-w-6xl mx-auto text-center">
-        <div class="animate-fade-in">
+        <div class="animate-fade-in-up">
             <h2 class="text-5xl md:text-6xl font-bold text-gray-800 mb-6">
-                <?php echo getGreeting(); ?>! 👋
+                <?php echo getGreeting(); ?>! <i class="fas fa-hand-wave"></i>
             </h2>
             <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
                 Welcome to my learning journey in web development. This site demonstrates
@@ -33,7 +33,7 @@ $page_title = SITE_NAME . ' - Learning Web Development';
 </section>
 
 <!-- Skills Section -->
-<section id="skills" class="py-20 px-4 bg-white">
+<section id="skills" class="py-20 px-4 bg-white animate-fade-in-up">
     <div class="max-w-6xl mx-auto">
         <h3 class="section-title">My Skills</h3>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -55,7 +55,7 @@ $page_title = SITE_NAME . ' - Learning Web Development';
 </section>
 
 <!-- Projects Section -->
-<section id="projects" class="py-20 px-4 bg-gray-50">
+<section id="projects" class="py-20 px-4 bg-gray-50 animate-fade-in-up">
     <div class="max-w-6xl mx-auto">
         <h3 class="section-title">My Projects</h3>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -79,7 +79,7 @@ $page_title = SITE_NAME . ' - Learning Web Development';
 </section>
 
 <!-- Interactive Counter Section -->
-<section class="py-20 px-4 bg-gradient-to-r from-blue-500 to-purple-600">
+<section class="py-20 px-4 bg-gradient-to-r from-blue-500 to-purple-600 animate-fade-in-up">
     <div class="max-w-4xl mx-auto text-center text-white">
         <h3 class="text-4xl font-bold mb-8">Interactive Counter (jQuery Demo)</h3>
         <div class="counter-container">
@@ -95,7 +95,7 @@ $page_title = SITE_NAME . ' - Learning Web Development';
 </section>
 
 <!-- Stats Section -->
-<section class="py-16 px-4 bg-white">
+<section class="py-16 px-4 bg-white animate-fade-in-up">
     <div class="max-w-6xl mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
             <div class="stat-card">

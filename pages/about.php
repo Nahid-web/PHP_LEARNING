@@ -12,9 +12,9 @@ $page_title = 'About Me - ' . SITE_NAME;
 <!-- About Hero Section -->
 <section class="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
     <div class="max-w-4xl mx-auto text-center">
-        <div class="animate-fade-in">
+        <div class="animate-fade-in-up">
             <div class="w-32 h-32 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mx-auto mb-8 flex items-center justify-center text-6xl text-white">
-                👨‍💻
+                <i class="fas fa-user-code"></i>
             </div>
             <h1 class="text-5xl font-bold text-gray-800 mb-6">About Me</h1>
             <p class="text-xl text-gray-600 mb-8">
@@ -25,7 +25,7 @@ $page_title = 'About Me - ' . SITE_NAME;
 </section>
 
 <!-- Bio Section -->
-<section class="py-20 px-4 bg-white">
+<section class="py-20 px-4 bg-white animate-fade-in-up">
     <div class="max-w-4xl mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -87,7 +87,7 @@ $page_title = 'About Me - ' . SITE_NAME;
 </section>
 
 <!-- Skills Progress Section -->
-<section class="py-20 px-4 bg-gray-50">
+<section class="py-20 px-4 bg-gray-50 animate-fade-in-up">
     <div class="max-w-6xl mx-auto">
         <h2 class="section-title">Skills & Progress</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -118,7 +118,7 @@ $page_title = 'About Me - ' . SITE_NAME;
 </section>
 
 <!-- Learning Timeline -->
-<section class="py-20 px-4 bg-white">
+<section class="py-20 px-4 bg-white animate-fade-in-up">
     <div class="max-w-4xl mx-auto">
         <h2 class="section-title">Learning Timeline</h2>
         <div class="relative">
@@ -128,7 +128,7 @@ $page_title = 'About Me - ' . SITE_NAME;
             <div class="space-y-8">
                 <div class="flex items-start">
                     <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center text-white text-2xl mr-6 z-10 relative">
-                        🎯
+                        <i class="fas fa-bullseye"></i>
                     </div>
                     <div class="flex-1">
                         <div class="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-lg border border-green-100">
@@ -141,7 +141,7 @@ $page_title = 'About Me - ' . SITE_NAME;
 
                 <div class="flex items-start">
                     <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center text-white text-2xl mr-6 z-10 relative">
-                        🎨
+                        <i class="fas fa-paint-brush"></i>
                     </div>
                     <div class="flex-1">
                         <div class="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-lg border border-blue-100">
@@ -154,7 +154,7 @@ $page_title = 'About Me - ' . SITE_NAME;
 
                 <div class="flex items-start">
                     <div class="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center text-white text-2xl mr-6 z-10 relative">
-                        ⚡
+                        <i class="fas fa-bolt"></i>
                     </div>
                     <div class="flex-1">
                         <div class="bg-gradient-to-r from-yellow-50 to-amber-50 p-6 rounded-lg border border-yellow-100">
@@ -167,7 +167,7 @@ $page_title = 'About Me - ' . SITE_NAME;
 
                 <div class="flex items-start">
                     <div class="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center text-white text-2xl mr-6 z-10 relative">
-                        🐘
+                        <i class="fab fa-php"></i>
                     </div>
                     <div class="flex-1">
                         <div class="bg-gradient-to-r from-purple-50 to-violet-50 p-6 rounded-lg border border-purple-100">
@@ -180,7 +180,7 @@ $page_title = 'About Me - ' . SITE_NAME;
 
                 <div class="flex items-start">
                     <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white text-2xl mr-6 z-10 relative">
-                        🚀
+                        <i class="fas fa-rocket"></i>
                     </div>
                     <div class="flex-1">
                         <div class="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-lg border border-blue-200">
@@ -196,7 +196,7 @@ $page_title = 'About Me - ' . SITE_NAME;
 </section>
 
 <!-- Achievements Section -->
-<section class="py-20 px-4 bg-gray-50">
+<section class="py-20 px-4 bg-gray-50 animate-fade-in-up">
     <div class="max-w-6xl mx-auto">
         <h2 class="section-title">Achievements</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -215,7 +215,7 @@ $page_title = 'About Me - ' . SITE_NAME;
 </section>
 
 <!-- Learning Resources -->
-<section class="py-20 px-4 bg-white">
+<section class="py-20 px-4 bg-white animate-fade-in-up">
     <div class="max-w-6xl mx-auto">
         <h2 class="section-title">Learning Resources</h2>
         <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">

@@ -12,7 +12,7 @@ $skills = [
         'description' => 'Real-time weather information with API integration',
         'tech' => 'PHP + API',
         'status' => 'In Progress',
-        'icon' => '🌤️',
+        'icon' => 'fas fa-cloud-sun',
         'github' => '#',
         'demo' => '#',
         'features' => ['API Integration', 'Geolocation', 'Dynamic Updates']
@@ -22,7 +22,7 @@ $skills = [
         'description' => 'Content management system for blog posts and articles',
         'tech' => 'PHP + MySQL',
         'status' => 'Planning',
-        'icon' => '📚',
+        'icon' => 'fas fa-blog',
         'github' => '#',
         'demo' => '#',
         'features' => ['CRUD Operations', 'User Authentication', 'Comment System']
@@ -32,7 +32,7 @@ $skills = [
         'description' => 'Responsive image gallery with lightbox functionality',
         'tech' => 'jQuery + CSS3',
         'status' => 'Completed',
-        'icon' => '🖼️',
+        'icon' => 'fas fa-images',
         'github' => '#',
         'demo' => '#',
         'features' => ['Lightbox Effect', 'Image Filtering', 'Lazy Loading']
@@ -42,7 +42,7 @@ $skills = [
         'description' => 'Secure contact form with validation and email functionality',
         'tech' => 'PHP + JavaScript',
         'status' => 'In Progress',
-        'icon' => '📧',
+        'icon' => 'fas fa-envelope',
         'github' => '#',
         'demo' => '#',
         'features' => ['Form Validation', 'Email Sending', 'Spam Protection']
@@ -115,28 +115,28 @@ $learning_resources = [
         'description' => 'Comprehensive web development documentation',
         'url' => 'https://developer.mozilla.org/',
         'category' => 'Documentation',
-        'icon' => '📚'
+        'icon' => 'fas fa-book'
     ],
     [
         'title' => 'PHP.net',
         'description' => 'Official PHP documentation and tutorials',
         'url' => 'https://www.php.net/',
         'category' => 'PHP',
-        'icon' => '🐘'
+        'icon' => 'fab fa-php'
     ],
     [
         'title' => 'Tailwind CSS Docs',
         'description' => 'Utility-first CSS framework documentation',
         'url' => 'https://tailwindcss.com/',
         'category' => 'CSS',
-        'icon' => '🎨'
+        'icon' => 'fas fa-paint-brush'
     ],
     [
         'title' => 'jQuery API',
         'description' => 'Complete jQuery library reference',
         'url' => 'https://api.jquery.com/',
         'category' => 'JavaScript',
-        'icon' => '⚡'
+        'icon' => 'fab fa-js'
     ]
 ];
 
@@ -146,28 +146,28 @@ $achievements = [
         'title' => 'First Website Deployed',
         'description' => 'Successfully deployed first website using PHP and HTML',
         'date' => '2024-01-15',
-        'icon' => '🚀',
+        'icon' => 'fas fa-rocket',
         'badge_color' => 'bg-green-500'
     ],
     [
         'title' => 'Responsive Design Master',
         'description' => 'Created mobile-first responsive layouts with Tailwind CSS',
         'date' => '2024-02-10',
-        'icon' => '📱',
+        'icon' => 'fas fa-mobile-alt',
         'badge_color' => 'bg-blue-500'
     ],
     [
         'title' => 'Interactive UI Builder',
         'description' => 'Implemented dynamic user interactions with jQuery',
         'date' => '2024-02-28',
-        'icon' => '⚡',
+        'icon' => 'fas fa-bolt',
         'badge_color' => 'bg-purple-500'
     ],
     [
         'title' => 'Database Integration',
         'description' => 'Connected PHP backend with MySQL database',
         'date' => '2024-03-12',
-        'icon' => '🗄️',
+        'icon' => 'fas fa-database',
         'badge_color' => 'bg-orange-500'
     ]
 ];
@@ -225,6 +225,40 @@ $contact_fields = [
     ]
 ];
 
+// Projects data
+$projects = [
+    [
+        'name' => 'Personal Portfolio',
+        'description' => 'A responsive portfolio website showcasing my learning journey',
+        'tech' => 'PHP + Tailwind CSS',
+        'status' => 'Completed',
+        'icon' => 'fas fa-paint-brush',
+        'github' => '#',
+        'demo' => '#',
+        'features' => ['Responsive Design', 'Interactive Elements', 'Modern UI']
+    ],
+    [
+        'name' => 'Todo List App',
+        'description' => 'Interactive task management application with local storage',
+        'tech' => 'JavaScript + jQuery',
+        'status' => 'Completed',
+        'icon' => 'fas fa-tasks',
+        'github' => '#',
+        'demo' => '#',
+        'features' => ['Add/Delete Tasks', 'Mark Complete', 'Local Storage']
+    ],
+    [
+        'name' => 'Weather App',
+        'description' => 'Current weather forecast and geolocation services',
+        'tech' => 'PHP + OpenWeatherMap API',
+        'status' => 'Completed',
+        'icon' => 'fas fa-cloud-sun',
+        'github' => '#',
+        'demo' => '#',
+        'features' => ['Current Weather', 'Forecast', 'Geolocation']
+    ]
+];
+
 // Site statistics (simulated data)
 $site_stats = [
     'total_projects' => count($projects),
@@ -234,79 +268,49 @@ $site_stats = [
     'blog_posts' => count($blog_posts),
     'achievements' => count($achievements)
 ];
-?> => 'HTML5',
-'description' => 'Semantic markup and modern HTML features',
-'level' => 90,
-'icon' => 'fab fa-html5',
-'color' => 'orange'
-],
-[
-'name' => 'CSS3 & Tailwind',
-'description' => 'Modern styling with utility-first approach',
-'level' => 85,
-'icon' => 'fab fa-css3-alt',
-'color' => 'blue'
-],
-[
-'name' => 'JavaScript',
-'description' => 'Interactive web functionality and DOM manipulation',
-'level' => 80,
-'icon' => 'fab fa-js-square',
-'color' => 'yellow'
-],
-[
-'name' => 'PHP',
-'description' => 'Server-side scripting and dynamic content',
-'level' => 75,
-'icon' => 'fab fa-php',
-'color' => 'purple'
-],
-[
-'name' => 'jQuery',
-'description' => 'Simplified JavaScript library for enhanced UX',
-'level' => 82,
-'icon' => 'fas fa-code',
-'color' => 'blue'
-],
-[
-'name' => 'Responsive Design',
-'description' => 'Mobile-first and cross-device compatibility',
-'level' => 88,
-'icon' => 'fas fa-mobile-alt',
-'color' => 'green'
-]
-];
 
-// Projects data
-$projects = [
-[
-'name' => 'Personal Portfolio',
-'description' => 'A responsive portfolio website showcasing my learning journey',
-'tech' => 'PHP + Tailwind CSS',
-'status' => 'Completed',
-'icon' => '🎨',
-'github' => '#',
-'demo' => '#',
-'features' => ['Responsive Design', 'Interactive Elements', 'Modern UI']
-],
-[
-'name' => 'Todo List App',
-'description' => 'Interactive task management application with local storage',
-'tech' => 'JavaScript + jQuery',
-'status' => 'Completed',
-'icon' => '📝',
-'github' => '#',
-'demo' => '#',
-'features' => ['Add/Delete Tasks', 'Mark Complete', 'Local Storage']
-],
-[
-'name' => 'Weather App',
-'description' => 'Current weather forecast and geolocation services',
-'tech' => 'PHP + OpenWeatherMap API',
-'status' => 'Completed',
-'icon' => '🌤️',
-'github' => '#',
-'demo' => '#',
-'features' => ['Current Weather', 'Forecast', 'Geolocation']
-]
+// Skills data
+$skills = [
+    [
+        'name' => 'HTML5',
+        'description' => 'Semantic markup and modern HTML features',
+        'level' => 90,
+        'icon' => 'fab fa-html5',
+        'color' => 'orange'
+    ],
+    [
+        'name' => 'CSS3 & Tailwind',
+        'description' => 'Modern styling with utility-first approach',
+        'level' => 85,
+        'icon' => 'fab fa-css3-alt',
+        'color' => 'blue'
+    ],
+    [
+        'name' => 'JavaScript',
+        'description' => 'Interactive web functionality and DOM manipulation',
+        'level' => 80,
+        'icon' => 'fab fa-js-square',
+        'color' => 'yellow'
+    ],
+    [
+        'name' => 'PHP',
+        'description' => 'Server-side scripting and dynamic content',
+        'level' => 75,
+        'icon' => 'fab fa-php',
+        'color' => 'purple'
+    ],
+    [
+        'name' => 'jQuery',
+        'description' => 'Simplified JavaScript library for enhanced UX',
+        'level' => 82,
+        'icon' => 'fas fa-code',
+        'color' => 'blue'
+    ],
+    [
+        'name' => 'Responsive Design',
+        'description' => 'Mobile-first and cross-device compatibility',
+        'level' => 88,
+        'icon' => 'fas fa-mobile-alt',
+        'color' => 'green'
+    ]
 ];

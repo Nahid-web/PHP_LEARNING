@@ -1,36 +1,6 @@
 </main>
 <!-- End Page Content Wrapper -->
 
-<!-- Contact Section -->
-<section id="contact" class="py-20 px-4 bg-white">
-    <div class="max-w-4xl mx-auto text-center">
-        <h3 class="section-title">Get In Touch</h3>
-        <div class="contact-container">
-            <p class="text-lg text-gray-700 mb-6">
-                This website was built on <strong><?php echo formatDate('today'); ?></strong> using modern web technologies.
-            </p>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                <?php foreach ($social_links as $platform => $link): ?>
-                    <div class="contact-info">
-                        <div class="contact-icon">
-                            <i class="<?php echo $link['icon']; ?>"></i>
-                        </div>
-                        <h4 class="font-semibold text-gray-800 mb-2"><?php echo $link['label']; ?></h4>
-                        <a href="<?php echo $link['url']; ?>"
-                            class="text-blue-600 hover:text-blue-800 transition-colors duration-300"
-                            target="_blank" rel="noopener">
-                            <?php echo $platform === 'email' ? CONTACT_EMAIL : 'View Profile'; ?>
-                        </a>
-                    </div>
-                <?php endforeach; ?>
-            </div>
-            <button id="contact-btn" class="btn-primary">
-                Say Hello! 👋
-            </button>
-        </div>
-    </div>
-</section>
-
 <!-- Footer -->
 <footer class="footer">
     <div class="max-w-6xl mx-auto px-4">

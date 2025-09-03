@@ -7,7 +7,7 @@
 
 // Site Configuration
 define('SITE_NAME', 'Learning Hub');
-define('SITE_URL', 'http://localhost:8000');
+define('SITE_URL', 'http://localhost/PHP_LEARNING');
 define('SITE_VERSION', '1.0.0');
 
 // Contact Information
@@ -23,7 +23,7 @@ define('DB_NAME', 'learning_website');
 
 // File Paths
 define('BASE_PATH', dirname(__DIR__));
-define('ASSETS_PATH', '/assets/');
+define('ASSETS_PATH', SITE_URL . '/assets/');
 define('CSS_PATH', ASSETS_PATH . 'css/');
 define('JS_PATH', ASSETS_PATH . 'js/');
 define('IMG_PATH', ASSETS_PATH . 'images/');
@@ -42,10 +42,10 @@ date_default_timezone_set(TIMEZONE);
 
 // Navigation Menu
 $navigation = [
-    'home' => ['label' => 'Home', 'url' => 'index.php'],
-    'about' => ['label' => 'About', 'url' => 'pages/about.php'],
-    'projects' => ['label' => 'Projects', 'url' => 'pages/projects.php'],
-    'contact' => ['label' => 'Contact', 'url' => 'pages/contact.php']
+    'home' => ['label' => 'Home', 'url' => SITE_URL . '/index.php'],
+    'about' => ['label' => 'About', 'url' => SITE_URL . '/pages/about.php'],
+    'projects' => ['label' => 'Projects', 'url' => SITE_URL . '/pages/projects.php'],
+    'contact' => ['label' => 'Contact', 'url' => SITE_URL . '/pages/contact.php']
 ];
 
 // Social Media Links
