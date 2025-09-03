@@ -1,105 +1,58 @@
-<?php
-// index.php
-include 'components/header.php';
-include 'components/card.php';
-include 'components/feature-box.php';
+<!DOCTYPE html>
+<html lang="en">
 
-renderHeader("Home - PHP Learning Hub");
-?>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn PHP - Home</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
 
-<!-- Hero Section -->
-<section class="bg-gradient-to-r from-blue-500 to-indigo-700 text-white py-16">
-    <div class="container mx-auto px-4 text-center">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4">Learn PHP & Web Development</h1>
-        <p class="text-xl mb-8 max-w-2xl mx-auto">A comprehensive guide to mastering PHP, HTML, CSS, JavaScript, and jQuery</p>
-        <button id="startBtn" class="bg-white text-blue-600 font-bold py-3 px-8 rounded-full hover:bg-blue-100 transition transform hover:scale-105">
-            Get Started
-        </button>
-    </div>
-</section>
+<body class="bg-gray-100 min-h-screen flex flex-col">
+    <?php include 'includes/header.php'; ?>
 
-<!-- PHP Examples Section -->
-<section class="py-12">
-    <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">PHP Examples</h2>
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <div class="bg-white p-6 rounded-lg shadow-lg max-w-md mx-auto">
+            <h1 class="text-2xl font-bold text-gray-800 mb-4">Welcome to Learn PHP</h1>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <?php
-            renderCard(
-                "fa-calendar-alt",
-                "Current Date",
-                "Today is " . date("l, F d, Y"),
-                "blue"
-            );
+            <!-- PHP Form Handling -->
+            <?php require 'includes/form_handler.php'; ?>
 
-            renderCard(
-                "fa-server",
-                "Server Information",
-                "Server: " . $_SERVER['SERVER_SOFTWARE'],
-                "green"
-            );
+            <!-- Form -->
+            <div class="mb-4">
+                <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" class="space-y-4">
+                    <label for="name" class="block text-gray-700">Your Name:</label>
+                    <input type="text" id="name" name="name" value="<?php echo $name; ?>" class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Submit</button>
+                </form>
+            </div>
 
-            renderCard(
-                "fa-calculator",
-                "Math Functions",
-                "Square root of 25 is " . sqrt(25),
-                "purple"
-            );
-            ?>
+            <!-- PHP Message Output -->
+            <?php if (!empty($message)): ?>
+                <p class="text-green-600"><?php echo $message; ?></p>
+            <?php endif; ?>
+
+            <!-- Visit Counter -->
+            <p id="counter" class="text-gray-600 mt-4">Page Visits: <?php echo $counter; ?></p>
+
+            <!-- Toggleable Message -->
+            <button id="toggleBtn" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 mt-4">Toggle Message</button>
+            <p id="toggleMessage" class="text-blue-600 mt-4 hidden">This message is toggled with jQuery!</p>
+
+            <!-- Dynamic Date Display -->
+            <p id="dateDisplay" class="text-gray-600 mt-4">Loading date...</p>
         </div>
-    </div>
-</section>
+    </main>
 
-<!-- Features Section -->
-<section class="py-12 bg-gray-50">
-    <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">What You'll Learn</h2>
+    <?php include 'includes/footer.php'; ?>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <?php
-            renderFeatureBox(
-                "fa-php",
-                "PHP Basics",
-                "Variables, functions, arrays, and control structures",
-                "blue"
-            );
+    <!-- Custom JavaScript -->
+    <script src="js/scripts.js"></script>
+</body>
 
-            renderFeatureBox(
-                "fa-html5",
-                "HTML Fundamentals",
-                "Semantic markup and document structure",
-                "green"
-            );
-
-            renderFeatureBox(
-                "fa-css3-alt",
-                "CSS Styling",
-                "Layouts, animations, and responsive design",
-                "yellow"
-            );
-
-            renderFeatureBox(
-                "fa-js",
-                "JavaScript & jQuery",
-                "DOM manipulation and interactive features",
-                "purple"
-            );
-            ?>
-        </div>
-    </div>
-</section>
-
-<script>
-    $(document).ready(function() {
-        $('#startBtn').click(function() {
-            $('html, body').animate({
-                scrollTop: $('.grid').first().offset().top - 100
-            }, 1000);
-        });
-    });
-</script>
-
-<?php
-include 'components/footer.php';
-renderFooter();
-?>
+</html>
